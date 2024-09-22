@@ -4,7 +4,6 @@ import * as dotenv from 'dotenv';
 dotenv.config()
 
 const URI = process.env.ATLAS_URI || "";
-console.log('URI:', URI)
 const client = new MongoClient(URI, {
   serverApi: {
     version: ServerApiVersion.v1,
