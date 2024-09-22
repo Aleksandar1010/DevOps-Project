@@ -23,6 +23,8 @@ jobs:
         run: |
           echo "${{ secrets.EC2_SSH_KEY }}" > /tmp/ssh_key
           chmod 600 /tmp/ssh_key
+          eval "$(ssh-agent -s)"
+          ssh-add /tmp/ssh_key
           
       - name: Sync files to EC2
         run: |
