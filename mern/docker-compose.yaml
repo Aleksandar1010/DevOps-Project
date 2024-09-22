@@ -34,7 +34,7 @@ services:
     ports:
       - 80:5173
     depends_on:
-      - api
+      - server
     networks:
       - app-network
     restart: always
