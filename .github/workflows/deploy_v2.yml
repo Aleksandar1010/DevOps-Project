@@ -28,7 +28,7 @@ jobs:
           
       - name: Sync files to EC2
         run: |
-          scp -i /tmp/ssh_key -r * ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/home/${{ secrets.EC2_USER }}/app
+          scp -i /tmp/ssh_key -o StrictHostKeyChecking=no -o UserKnowHostsFile=/dev/null -v -r * ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/home/${{ secrets.EC2_USER }}/app
 
       - name: Deploy client if changes detected
         if: contains(github.event.head_commit.message, 'mern/client/')
