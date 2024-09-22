@@ -25,6 +25,7 @@ jobs:
           chmod 600 /tmp/ssh_key
           eval "$(ssh-agent -s)"
           ssh-add /tmp/ssh_key
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
           
       - name: Sync files to EC2
         env:
