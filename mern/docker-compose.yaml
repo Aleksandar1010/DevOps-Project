@@ -11,7 +11,7 @@ services:
       - app-network
     restart: always
 
-  api:
+  server:
     build: ./server
     container_name: express-api
     environment:
@@ -26,7 +26,7 @@ services:
       - app-network
     restart: always
 
-  frontend:
+  client:
     build: ./client
     container_name: frontend
     environment:
