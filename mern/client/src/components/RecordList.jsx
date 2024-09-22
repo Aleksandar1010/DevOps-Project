@@ -99,9 +99,6 @@ export default function RecordList() {
                 <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
                   Action
                 </th>
-                <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
-                  Test Change1233455
-                </th>
               </tr>
             </thead>
             <tbody className="[&amp;_tr:last-child]:border-0">
