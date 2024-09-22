@@ -100,7 +100,7 @@ export default function RecordList() {
                   Action
                 </th>
                 <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
-                  Test Change
+                  Test Change123
                 </th>
               </tr>
             </thead>
